@@ -24,11 +24,11 @@ class Song
     song= Song.new
     song.name = name
     song.save
-    song 
+    song
   end
   def Song.find_by_name(name)
     @@all.detect {|c| c.name == name}
-    
+
   end
   def self.find_or_create_by_name(name)
     if Song.find_by_name(name) != nil
